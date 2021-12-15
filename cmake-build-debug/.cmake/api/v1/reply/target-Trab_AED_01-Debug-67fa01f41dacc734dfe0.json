@@ -59,7 +59,10 @@
 				1,
 				3,
 				5,
-				7
+				7,
+				9,
+				11,
+				13
 			]
 		}
 	],
@@ -100,7 +103,10 @@
 				1,
 				3,
 				5,
-				7
+				7,
+				9,
+				11,
+				13
 			]
 		},
 		{
@@ -110,7 +116,10 @@
 				2,
 				4,
 				6,
-				8
+				8,
+				10,
+				12,
+				14
 			]
 		}
 	],
@@ -119,7 +128,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "Trab_AED_01/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -164,6 +173,39 @@
 		{
 			"backtrace" : 1,
 			"path" : "Trab_AED_01/services.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Trab_AED_01/menu.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/menu.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Trab_AED_01/tickets.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/tickets.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Trab_AED_01/company.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/company.h",
 			"sourceGroupIndex" : 1
 		}
 	],

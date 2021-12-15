@@ -1,8 +1,26 @@
 #include "planes.h"
 #include "algorithm"
-
+#include "company.h"
 using namespace std;
 
+Plane::Plane(string registration, int capacity) {
+    this->registration=registration;
+    this->capacity=capacity;
+}
+
+string Plane::get_registration() {
+    return registration;
+}
+
+bool Plane::remove_plane() {
+
+}
+
+
+
+
+
+/*
 bool compFlights(Flight &f1, Flight &f2){
     if (f1.get_departure() != f2.get_departure()){
         return f1.get_departure()< f2.get_departure();
@@ -14,15 +32,8 @@ bool compFlights(Flight &f1, Flight &f2){
 };
 
 
-
-
-Plane::Plane(int registration, int capacity) {
-    this->registration=registration;
-    this->capacity=capacity;
-}
-
 void Plane::set_flights(list<Flight> plan) {
-    this->plan=plan;
+    this->plan=plan ;
     plan.sort(compFlights);
 }
 bool Plane::cancel_flight(Flight flight){
@@ -35,3 +46,4 @@ bool Plane::cancel_flight(Flight flight){
     }
     return false;
 }
+ */

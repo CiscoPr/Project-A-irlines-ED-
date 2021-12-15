@@ -18,3 +18,9 @@ float Flight::get_departure() {
 float Flight::get_duration(){
     return duration;
 }
+string Flight::get_origin() {
+    return origin;
+}
+string Flight::get_destination() {
+    return destination;
+}

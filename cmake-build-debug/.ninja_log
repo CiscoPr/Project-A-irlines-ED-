@@ -1,3 +1,11 @@
 # ninja log v5
 1	501	6612240899933479	CMakeFiles/Trab_AED_01.dir/main.cpp.obj	74dd533b6d5da347
-503	680	6612240901698764	Trab_AED_01.exe	e07ee2209fcf4440
+927	1182	6612723802998205	Trab_AED_01.exe	3340542aede854
+1	367	6612875429360217	build.ninja	1f08c94b1ce4453f
+52	625	6612720804917116	CMakeFiles/Trab_AED_01.dir/Trab_AED_01/tickets.cpp.obj	e562f4fcc0042df8
+29	574	6612714960166360	CMakeFiles/Trab_AED_01.dir/Trab_AED_01/employees.cpp.obj	6fb0066d855e38ba
+39	586	6612714960286038	CMakeFiles/Trab_AED_01.dir/Trab_AED_01/services.cpp.obj	990a9aba6cc23cfa
+51	859	6612704234200451	CMakeFiles/Trab_AED_01.dir/Trab_AED_01/flights.cpp.obj	d9473f1db34f48f
+3	926	6612723800465429	CMakeFiles/Trab_AED_01.dir/Trab_AED_01/main.cpp.obj	4026002dbbcc668c
+4	1013	6612704235766267	CMakeFiles/Trab_AED_01.dir/Trab_AED_01/planes.cpp.obj	586865c65e7e1764
+47	751	6612720806177895	CMakeFiles/Trab_AED_01.dir/Trab_AED_01/menu.cpp.obj	6164b635febcdc1b
