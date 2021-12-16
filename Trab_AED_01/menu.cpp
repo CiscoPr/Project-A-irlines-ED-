@@ -1,7 +1,7 @@
 #include "menu.h"
 #include <thread>
 #include <iostream>
-#include <iomanip>
+
 
 using namespace std;
 using namespace chrono;
@@ -25,11 +25,11 @@ void Menu::display() {
     cout << "                   |                    (_  _(_ ,)                                         |\n";
     cout << "                   -------------------------------------------------------------------------\n";
     cout << "\n                                                 AED Airlines                        "<< endl;
-
+    this_thread::sleep_for(chrono::seconds(4));
     do{
 
-        this_thread::sleep_for(chrono::seconds(4));
-        cout << string(50, '\n');
+
+        cout << string(4, '\n');
         cout << "\b                                            Welcome to the AED Airlines!\n";
         cout <<"                                                  How may we help you?\n";
         cout << "                          1- I want to buy a ticket\n";
@@ -53,11 +53,7 @@ void Menu::display() {
                     cin >> answer;
                     if ((tolower(answer) == 'n'))
                         break;
-                    else if ((tolower(answer) == 'y')) {
-                        cout << "\nWe hope to see you again soon!";
-                        this_thread::sleep_for(chrono::seconds(3));
-                        exit(0);
-                    }
+
         }
 
     }while(answer != 'y');

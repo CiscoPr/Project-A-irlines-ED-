@@ -858,19 +858,7 @@ CMakeFiles/Trab_AED_01.dir/Trab_AED_01/menu.cpp.o: ../Trab_AED_01/menu.cpp \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/iomanip \
-  /usr/include/c++/11/locale \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
-  /usr/include/c++/11/bits/quoted_string.h \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc
+  /usr/include/c++/11/bits/istream.tcc
 
 CMakeFiles/Trab_AED_01.dir/Trab_AED_01/planes.cpp.o: ../Trab_AED_01/planes.cpp \
   /usr/include/stdc-predef.h \
@@ -1384,24 +1372,6 @@ CMakeFiles/Trab_AED_01.dir/Trab_AED_01/tickets.cpp.o: ../Trab_AED_01/tickets.cpp
 
 /usr/include/c++/11/algorithm:
 
-/usr/include/c++/11/bits/sstream.tcc:
-
-/usr/include/c++/11/sstream:
-
-/usr/include/c++/11/bits/quoted_string.h:
-
-/usr/include/c++/11/bits/locale_conv.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.h:
-
-/usr/include/c++/11/locale:
-
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/ctime:
@@ -1750,8 +1720,6 @@ CMakeFiles/Trab_AED_01.dir/Trab_AED_01/tickets.cpp.o: ../Trab_AED_01/tickets.cpp
 
 /usr/include/c++/11/bits/locale_classes.h:
 
-/usr/include/libintl.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/alloca.h:
@@ -1803,8 +1771,6 @@ CMakeFiles/Trab_AED_01.dir/Trab_AED_01/tickets.cpp.o: ../Trab_AED_01/tickets.cpp
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/c++/11/system_error:
-
-/usr/include/c++/11/iomanip:
 
 /usr/include/ctype.h:
 

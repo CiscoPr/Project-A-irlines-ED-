@@ -6,7 +6,7 @@ using namespace std;
 class Menu{
 public:
     void display();
-    void interface();
+
 };
 
 #endif
