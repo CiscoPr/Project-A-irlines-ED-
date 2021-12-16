@@ -1,0 +1,3 @@
+/home/francisco/Documents/UP/2ano1s/AED/Project-A-irlines-ED--main/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/francisco/Documents/UP/2ano1s/AED/Project-A-irlines-ED--main/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/francisco/Documents/UP/2ano1s/AED/Project-A-irlines-ED--main/cmake-build-debug/CMakeFiles/Trab_AED_01.dir
