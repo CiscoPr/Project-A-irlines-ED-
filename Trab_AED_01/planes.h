@@ -4,6 +4,7 @@
 #include "planes.h"
 #include "company.h"
 #include "flights.h"
+#include "flights.cpp"
 #include <string>
 #include <list>
 
