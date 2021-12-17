@@ -12,8 +12,8 @@ string Plane::get_registration() {
     return registration;
 }
 
-bool Plane::remove_plane() {
-
+int Plane::get_capacity() {
+    return capacity;
 }
 
 

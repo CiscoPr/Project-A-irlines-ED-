@@ -15,9 +15,11 @@ private:
     list<Flight> plan;
 public:
     Plane(string registration, int capacity);
+    void set_planes(ifstream &flight);
     string get_registration();
-    bool remove_plane();
-    void add_plane();
+    int get_capacity();
+    bool cancel_flight();
+    bool add_flight();
 
 };
 #endif
