@@ -1,11 +1,16 @@
 #include "planes.h"
-#include "algorithm"
 #include "company.h"
+#include "algorithm"
+#include "company.cpp"
 using namespace std;
 
 Plane::Plane(string registration, int capacity) {
     this->registration=registration;
     this->capacity=capacity;
+}
+
+list<Flight> Plane::get_plan() {
+    return plan;
 }
 
 string Plane::get_registration() {
@@ -16,8 +21,9 @@ int Plane::get_capacity() {
     return capacity;
 }
 
-
-
+void Plane::set_plans(list<Flight> plan) {
+    this->plan=plan;
+}
 
 
 /*

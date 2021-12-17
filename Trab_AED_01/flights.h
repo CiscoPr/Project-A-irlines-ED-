@@ -2,7 +2,8 @@
 #define TRAB_AED_01_FLIGHTS_H
 
 #include <string>
-
+#include "company.h"
+#include "company.cpp"
 using namespace std;
 
 class Flight {
@@ -19,8 +20,8 @@ public:
     float get_duration();
     string get_origin();
     string get_destination();
-    bool cancel_flight();
     bool add_flight();
+    bool cancel_flight(int id, Company &comp1);
 };
 
 #endif

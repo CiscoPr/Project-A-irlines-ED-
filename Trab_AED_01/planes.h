@@ -2,6 +2,7 @@
 #define TRAB_AED_01_PLANES_H
 
 #include "planes.h"
+#include "company.h"
 #include "flights.h"
 #include <string>
 #include <list>
@@ -15,10 +16,10 @@ private:
     list<Flight> plan;
 public:
     Plane(string registration, int capacity);
-    void set_planes(ifstream &flight);
+    list<Flight> get_plan();
+    void set_plans(list<Flight> plan);
     string get_registration();
     int get_capacity();
-    bool cancel_flight();
     bool add_flight();
 
 };
