@@ -27,6 +27,8 @@ void Menu::display() {
     cout << "\n                                                 AED Airlines                        "<< endl;
     this_thread::sleep_for(chrono::seconds(4));
     do{
+
+
         cout << string(4, '\n');
         cout << "\b                                            Welcome to the AED Airlines!\n";
         cout <<"                                                  How may we help you?\n";
@@ -47,10 +49,14 @@ void Menu::display() {
             case 4:
                 break;
             case 5:
+                do {
                     cout << "Are you sure you want to quit? [y/n] ";
                     cin >> answer;
                     if ((tolower(answer) == 'n'))
                         break;
+                }while(tolower(answer) != 'n' and tolower(answer)!= 'y') ;
+
+
 
         }
 
