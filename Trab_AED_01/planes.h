@@ -7,6 +7,7 @@
 #include <string>
 #include <list>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -30,7 +31,7 @@ public:
     void show_flights();
     bool add_flight(Flight flight);
     bool cancel_flight(int id);
-    void update(ofstream &f);
+    void uopdate(fstream &f);
 };
 
 

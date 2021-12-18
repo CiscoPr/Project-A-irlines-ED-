@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "flights.h"
 #include <thread>
 #include <iostream>
 using namespace std;
@@ -52,7 +53,9 @@ void Menu::company_menu(Menu menu1, Company c1) {
     cout << "                          3- Add planes\n";
     cout << "                          4- Remove planes\n";
     cout << "                          5- Update planes\n";
-    cout << "                          6- exit\n";
+    cout << "                          6- Load flights\n";
+    cout << "                          7- Show flight\n";
+    cout << "                          9- exit\n";
     cout << "                                                Choose your option here: ";
     cin >> answer;
     switch (answer) {
@@ -108,6 +111,26 @@ void Menu::company_menu(Menu menu1, Company c1) {
             }
         }
         case 6:{
+            ifstream f_2;
+            f_2.open("/Trab_AED_01/Trab_AED_01/flight_plan.txt");
+            if (!f_2.is_open()) {
+                cout << "File not found";
+                menu1.company_menu(menu1,c1);
+            } else {
+                for (int i=0; i < c1.get_planes().size();i++) {
+                    c1.get_planes()[i].set_flights(f_2);
+                }
+                    f_2.close();
+                    menu1.company_menu(menu1, c1);
+            }
+        }
+        case 7:{
+            for (int i =0; i < c1.get_planes().size();i++ ) {
+                c1.get_planes()[i].show_flights();
+            }
+            menu1.company_menu(menu1, c1);
+        }
+        case 9:{
             char ans = ' ';
             cout << "Are you sure you want to quit? [y/n] ";
             cin >> ans;
