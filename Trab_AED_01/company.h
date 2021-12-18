@@ -4,9 +4,7 @@
 #include "planes.h"
 #include <vector>
 using namespace std;
-class Flight;
 class Plane;
-
 class Company{
 private:
     vector<Plane> planes;

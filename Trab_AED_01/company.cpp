@@ -1,9 +1,7 @@
 #include <iostream>
 #include "company.h"
 using namespace std;
-class Company;
-class Plane;
-class Flight;
+
 Company::Company() {
     vector<Plane> empty;
     this->planes = empty;

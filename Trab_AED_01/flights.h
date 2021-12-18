@@ -3,10 +3,8 @@
 
 #include <string>
 #include "company.h"
-#include "company.cpp"
+
 using namespace std;
-class Company;
-class Plane;
 
 class Flight {
 private:
@@ -23,7 +21,7 @@ public:
     string get_origin();
     string get_destination();
     bool add_flight();
-    bool cancel_flight(int id, Company &comp1);
+    //bool cancel_flight(int id, Company &comp1);
 };
 
 #endif
