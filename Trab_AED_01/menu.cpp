@@ -26,6 +26,7 @@ int Menu::display() {
     cout << "                   -------------------------------------------------------------------------\n";
     cout << "\n                                                 AED Airlines                        " << endl;
     this_thread::sleep_for(chrono::seconds(4));
+<<<<<<< HEAD
     cout << string(4, '\n');
         cout << "\b                          1- Company Menu\n";
         cout << "                          2- User Menu\n";
@@ -78,6 +79,43 @@ int Menu::company_menu() {
     cout << "                                                Choose your option here: ";
     cin >> answer;
     return answer;
+=======
+    do{
+
+
+        cout << string(4, '\n');
+        cout << "\b                                            Welcome to the AED Airlines!\n";
+        cout <<"                                                  How may we help you?\n";
+        cout << "                          1- I want to buy a ticket\n";
+        cout << "                          2- Available flights\n";
+        cout << "                          3- Means of transport near the airport\n";
+        cout << "                          4- Something else\n";
+        cout << "                          5- exit\n";
+        cout << "                                                Choose your option here: ";
+        cin >> choice;
+        switch(choice){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                do {
+                    cout << "Are you sure you want to quit? [y/n] ";
+                    cin >> answer;
+                    if ((tolower(answer) == 'n'))
+                        break;
+                }while(tolower(answer) != 'n' and tolower(answer)!= 'y') ;
+
+
+
+        }
+
+    }while(answer != 'y');
+>>>>>>> b62abd8aa20960844cfbbd4bdb7a5ca888a3fc90
 }
 
 
