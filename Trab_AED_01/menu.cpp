@@ -147,7 +147,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
             cin >> origin;
             cout << "\nand its destination: ";
             cin >> destination;
-            cout << "\n to the plane with the id: ";
+            cout << "\n to the plane with the registration: ";
             cin >> registration;
             Flight f1(id,duration,departure,origin,destination);
             for (int i = 0 ; i < c1.get_planes().size();i++){
@@ -157,7 +157,30 @@ void Menu::company_menu(Menu menu1, Company c1) {
             menu1.company_menu(menu1,c1);
         }
         case 9:{
-
+            int id;
+            cout << "Insert id of the flight to be removed: ";
+            cin >> id;
+            for(int i = 0 ; i > c1.get_planes().size();i++){
+                Plane p1 = c1.get_planes()[i];
+                p1.cancel_flight(id);
+            }
+            menu1.company_menu(menu1,c1);
+        }
+        case 10:{
+            ofstream f;
+            f.open("/Trab_AED_01/Trab_AED_01/flight_plan.txt");
+            if (!f.is_open()) {
+                cout << "File not found";
+                menu1.company_menu(menu1,c1);
+            }
+            else {
+                for (int i = 0 ; i < c1.get_planes().size();i++) {
+                    c1.get_planes()[i].update(f);
+                }
+                f.close();
+                cout << "\nPlanes updated successfully!";
+                menu1.company_menu(menu1,c1);
+            }
         }
         case 15:{
             char ans = ' ';

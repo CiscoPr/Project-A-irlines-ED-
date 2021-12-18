@@ -38,7 +38,7 @@ void Plane::set_plans(vector<Flight> plan) {
     this->plan=plan;
 }
 
-vector<Flight> Plane::get_plan() {
+vector<Flight> &Plane::get_plan() {
     return plan;
 }
 
@@ -85,7 +85,7 @@ void Plane::show_flights() {
     }
 
 bool Plane::add_flight(Flight flight ) {
-    for (int i = 0 ; plan.size();i++){
+    for (int i = 0 ; i < plan.size();i++){
         if ((flight.get_departure() > plan[i].get_departure()+plan[i].get_duration()) && (flight.get_departure()+flight.get_duration() < plan[i+1].get_departure())){
             plan.push_back(flight);
             sort ( plan.begin(), plan.end(), compFlights);
@@ -96,15 +96,18 @@ bool Plane::add_flight(Flight flight ) {
 }
 
 
-/*
-bool Plane::cancel_flight(Flight flight){
-    list<Flight>::iterator it;
-    for (it= plan.begin();it != plan.end(); it++){
-        if ( (*it).get_id()==flight.get_id()){
-            plan.erase(it);
+bool Plane::cancel_flight(int id) {
+    for (int i = 0; i < plan.size();i++){
+        if (plan[i].get_id()==id){
+            plan.erase(plan.begin()+i);
             return true;
         }
     }
     return false;
 }
- */
+
+void Plane::update(ofstream &f) {
+    for (int i=0;i < plan.size();i++){
+        f << plan[i].get_id() << " "<<plan[i].get_duration()<< " "<<plan[i].get_departure()<< " "<<plan[i].get_origin()<<" "<<plan[i].get_destination()<< endl;
+    }
+}

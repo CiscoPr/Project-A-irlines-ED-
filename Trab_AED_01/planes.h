@@ -25,13 +25,13 @@ public:
     void set_plans(vector<Flight> plan);
     string get_registration();
     string get_type();
-    vector<Flight> get_plan();
+    vector<Flight> &get_plan();
     int get_capacity();
     void set_flights(ifstream &f);
     void show_flights();
     bool add_flight(Flight flight);
     bool cancel_flight(int id);
-    void update(fstream &f);
+    void update(ofstream &f);
 };
 
 
