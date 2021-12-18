@@ -5,6 +5,7 @@
 #include "company.h"
 
 using namespace std;
+class Company;
 
 class Flight {
 private:
@@ -20,8 +21,11 @@ public:
     float get_duration();
     string get_origin();
     string get_destination();
-    bool add_flight();
-    //bool cancel_flight(int id, Company &comp1);
+    void set_flights(ifstream &f);
+    void show_flights();
+    bool add_flight(Flight flight);
+    bool cancel_flight(int id, Company &comp1);
+    void update(ofstream &f);
 };
 
 #endif

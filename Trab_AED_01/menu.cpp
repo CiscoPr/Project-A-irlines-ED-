@@ -1,8 +1,6 @@
 #include "menu.h"
 #include <thread>
 #include <iostream>
-
-
 using namespace std;
 using namespace chrono;
 int Menu::display() {
@@ -27,13 +25,13 @@ int Menu::display() {
     cout << "\n                                                 AED Airlines                        " << endl;
 //   this_thread::sleep_for(chrono::seconds(4));
     cout << string(4, '\n');
-        cout << "\b                          1- Company Menu\n";
-        cout << "                          2- User Menu\n";
-        cout << "                          3- exit\n";
-        cout << "                                                Choose your option here: ";
-        cin >> choice;
-        return choice;
-    }
+    cout << "\b                          1- Company Menu\n";
+    cout << "                          2- User Menu\n";
+    cout << "                          3- exit\n";
+    cout << "                                                Choose your option here: ";
+    cin >> choice;
+    return choice;
+}
 
 
 
@@ -54,8 +52,8 @@ int Menu::company_menu() {
     return answer;
 }
 
-    /*
+/*
 int Menu(){
 
 }
-     */
+ */

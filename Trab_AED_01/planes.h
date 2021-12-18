@@ -21,6 +21,7 @@ public:
     Plane(string registration, int capacity);
     void set_plans(list<Flight> plan);
     string get_registration();
+    list<Flight> get_plan();
     int get_capacity();
     bool add_flight();
 

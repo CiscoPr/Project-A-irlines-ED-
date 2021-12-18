@@ -27,7 +27,9 @@ string Flight::get_destination() {
     return destination;
 }
 
-/*
+void Flight::set_flights(ifstream &f) {
+}
+
 bool Flight::cancel_flight(int id, Company &comp1) {
     vector<Plane> planes=comp1.get_planes();
     list<Flight>::iterator it;
@@ -42,5 +44,5 @@ bool Flight::cancel_flight(int id, Company &comp1) {
         }
     }
     return false;
-}*/
+}
 
