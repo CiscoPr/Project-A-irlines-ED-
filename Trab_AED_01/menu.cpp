@@ -35,7 +35,7 @@ int Menu::display() {
 
 
 
-int Menu::company_menu() {
+void Menu::company_menu(Menu menu1, Company c1) {
     int answer;
     int choice;
     cout << string(4, '\n');
@@ -49,7 +49,58 @@ int Menu::company_menu() {
     cout << "                          6- exit\n";
     cout << "                                                Choose your option here: ";
     cin >> answer;
-    return answer;
+    switch (answer) {
+        case 1: {
+            ifstream f;
+            f.open("/Trab_AED_01/Trab_AED_01/planes.txt");
+            if (!f.is_open()) {
+                cout << "File not found";
+                menu1.company_menu(menu1,c1);
+
+            } else {
+                c1.set_planes(f);
+                f.close();
+                menu1.company_menu(menu1,c1);
+            }
+        }
+        case 2:
+            c1.show_planes();
+            menu1.company_menu(menu1,c1);
+
+        case 3: {                                       //adiciona aviões
+            string r;
+            int c;
+            cout << "Add a plane by typing its registration: ";
+            cin >> r;
+
+            cout << "\nand its capacity: ";
+            cin >> c;
+            c1.add_plane(r, c);
+            menu1.company_menu(menu1,c1);
+        }
+        case 4: {                                        //remove aviões
+            string r;
+            int c;
+            cout << "To remove a plane, insert its registration: ";
+            cin >> r;
+            c1.remove_plane(r);
+            menu1.company_menu(menu1,c1);
+        }
+
+        case 5: {                                       //dá update aos aviões
+            ofstream f;
+            f.open("/Trab_AED_01/Trab_AED_01/planes.txt");
+            if (!f.is_open()) {
+                cout << "File not found";
+                menu1.company_menu(menu1,c1);
+            } else {
+                c1.update(f);
+                f.close();
+                cout << "\nPlanes updated successfully!";
+                menu1.company_menu(menu1,c1);
+            }
+        }
+    }
 }
 
 /*
