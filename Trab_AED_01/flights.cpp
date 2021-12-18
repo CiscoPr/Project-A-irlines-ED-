@@ -2,6 +2,7 @@
 #include "planes.h"
 using namespace std;
 
+
 Flight::Flight(int id, float duration, float departure, string origin, string destination) {
     this->id=id;
     this->duration=duration;
@@ -25,6 +26,8 @@ string Flight::get_origin() {
 string Flight::get_destination() {
     return destination;
 }
+
+/*
 bool Flight::cancel_flight(int id, Company &comp1) {
     vector<Plane> planes=comp1.get_planes();
     list<Flight>::iterator it;
@@ -39,4 +42,5 @@ bool Flight::cancel_flight(int id, Company &comp1) {
         }
     }
     return false;
-}
+}*/
+

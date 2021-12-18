@@ -5,6 +5,8 @@
 #include "company.h"
 #include "company.cpp"
 using namespace std;
+class Company;
+class Plane;
 
 class Flight {
 private:

@@ -5,7 +5,9 @@ using namespace std;
 
 class Menu{
 public:
-    void display();
+    int display();
+    int user_menu();
+    int company_menu();
 };
 
 #endif
