@@ -1,7 +1,13 @@
 #include <iostream>
 #include "company.h"
 #include <sstream>
+#include <algorithm>
 using namespace std;
+bool compPlane( Plane &p1,  Plane &p2){
+    return p1.get_registration()< p2.get_registration();
+}
+
+
 
 Company::Company() {
     vector<Plane> empty;
@@ -20,6 +26,7 @@ void Company::set_planes(ifstream &f) {
         Plane p1(registration,capacity);
         up_plane.push_back(p1);
     }
+    sort(up_plane.begin(), up_plane.end(), compPlane);
     this->planes=up_plane;
 }
 
@@ -34,6 +41,7 @@ void Company::show_planes() {
 void Company::add_plane(string registration, int capacity) {
     Plane p1(registration, capacity);
     planes.push_back(p1);
+    sort(planes.begin(), planes.end(), compPlane);
 }
 bool Company::remove_plane(string registration) {
     for( int i =0; i < planes.size();i++){

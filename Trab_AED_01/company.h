@@ -11,11 +11,11 @@ private:
     vector<Plane> planes;
 public:
     Company(); //done
+    vector<Plane> get_planes();
     void set_planes(ifstream &f); //done
     void show_planes(); //done
     void add_plane(string registration, int capacity);
     bool remove_plane(string registration);
-    vector<Plane> get_planes();
     void update(ofstream &f);
 };
 
