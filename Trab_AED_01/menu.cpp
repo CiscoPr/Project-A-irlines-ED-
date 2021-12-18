@@ -73,7 +73,7 @@ int Menu::company_menu() {
     cout << "\b                                            Welcome to the AED Airlines!\n";
     cout <<"                                                  How may we help you?\n";
     cout << "                          1- Load Planes from file\n";
-    cout << "                          2- \n";
+    cout << "                          2- View Planes\n";
     cout << "                          3- \n";
     cout << "                          5- exit\n";
     cout << "                                                Choose your option here: ";
