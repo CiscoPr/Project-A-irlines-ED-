@@ -16,7 +16,7 @@ public:
     void add_plane(string registration, int capacity);
     bool remove_plane(string registration);
     vector<Plane> get_planes();
-    void update();
+    void update(ofstream &f);
 };
 
 #endif //TRAB_AED_01_COMPANY_H

@@ -48,3 +48,10 @@ bool Company::remove_plane(string registration) {
 vector<Plane> Company::get_planes() {
     return planes;
 }
+
+void Company::update(ofstream &f) {
+    for (int i = 0; i < planes.size();i++){
+        f << planes[i].get_registration() << endl << planes[i].get_capacity()<< endl;
+    }
+}
+
