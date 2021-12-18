@@ -6,6 +6,7 @@
 #include "flights.h"
 #include <string>
 #include <list>
+#include <vector>
 
 using namespace std;
 
@@ -13,18 +14,24 @@ class Flight;
 class Company;
 
 class Plane{
-            private:
+private:
             string registration;
+            string type;
             int capacity;
-            list<Flight> plan;
+            vector<Flight> plan;
 public:
-    Plane(string registration, int capacity);
-    void set_plans(list<Flight> plan);
+    Plane(string registration, string type, int capacity);
+    void set_plans(vector<Flight> plan);
     string get_registration();
-    list<Flight> get_plan();
+    string get_type();
+    vector<Flight> get_plan();
     int get_capacity();
-    bool add_flight();
-
+    void set_flights(ifstream &f);
+    void show_flights();
+    bool add_flight(Flight flight);
+    bool cancel_flight(int id);
+    void update(ofstream &f);
 };
+
 
 #endif

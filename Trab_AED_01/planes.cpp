@@ -1,11 +1,13 @@
 #include "planes.h"
 #include "company.h"
 #include "algorithm"
+
 using namespace std;
 
 
-Plane::Plane(string registration, int capacity) {
+Plane::Plane(string registration, string type, int capacity) {
     this->registration=registration;
+    this->type=type;
     this->capacity=capacity;
 }
 
@@ -14,16 +16,23 @@ string Plane::get_registration() {
     return registration;
 }
 
+string Plane::get_type() {
+    return type;
+}
 int Plane::get_capacity() {
     return capacity;
 }
 
-void Plane::set_plans(list<Flight> plan) {
+void Plane::set_plans(vector<Flight> plan) {
     this->plan=plan;
 }
 
-list<Flight> Plane::get_plan() {
+vector<Flight> Plane::get_plan() {
     return plan;
+}
+
+void Plane::set_flights(ifstream &f) {
+
 }
 
 

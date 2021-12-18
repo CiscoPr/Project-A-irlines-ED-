@@ -1,6 +1,7 @@
 #ifndef TRAB_AED_01_MENU_H
 #define TRAB_AED_01_MENU_H
 #include "company.h"
+#include "flights.h"
 
 using namespace std;
 

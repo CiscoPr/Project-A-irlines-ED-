@@ -5,8 +5,7 @@ using namespace std;
 using namespace chrono;
 int Menu::display() {
     int choice;
-    char answer = ' ';
-    string bruh = "         ";
+    char ch = ' ';
 
     cout << "                   -------------------------------------------------------------------------\n";
     cout << "                   |                        || _________                                   |\n";
@@ -23,18 +22,25 @@ int Menu::display() {
     cout << "                   |                    (_  _(_ ,)                                         |\n";
     cout << "                   -------------------------------------------------------------------------\n";
     cout << "\n                                                 AED Airlines                        " << endl;
-//   this_thread::sleep_for(chrono::seconds(4));
+
+    //   this_thread::sleep_for(chrono::seconds(4));
     cout << string(4, '\n');
     cout << "\b                          1- Company Menu\n";
     cout << "                          2- User Menu\n";
     cout << "                          3- exit\n";
     cout << "                                                Choose your option here: ";
     cin >> choice;
+    if (choice == 3) {
+        cout << "Are you sure you want to quit? [y/n] ";
+        cin >> ch;
+        if ((tolower(ch) == 'n'))
+            display();
+        else if ((tolower(ch) == 'y'))
+            exit(0);
+    }
+
     return choice;
 }
-
-
-
 void Menu::company_menu(Menu menu1, Company c1) {
     int answer;
     int choice;
@@ -68,14 +74,15 @@ void Menu::company_menu(Menu menu1, Company c1) {
             menu1.company_menu(menu1,c1);
 
         case 3: {                                       //adiciona aviões
-            string r;
+            string r,t;
             int c;
             cout << "Add a plane by typing its registration: ";
             cin >> r;
-
+            cout << "\nand its type: ";
+            cin >> t;
             cout << "\nand its capacity: ";
             cin >> c;
-            c1.add_plane(r, c);
+            c1.add_plane(r, t,c);
             menu1.company_menu(menu1,c1);
         }
         case 4: {                                        //remove aviões
@@ -100,11 +107,15 @@ void Menu::company_menu(Menu menu1, Company c1) {
                 menu1.company_menu(menu1,c1);
             }
         }
+        case 6:{
+            char ans = ' ';
+            cout << "Are you sure you want to quit? [y/n] ";
+            cin >> ans;
+            if ((tolower(ans) == 'n'))
+                menu1.company_menu(menu1, c1);
+            else if ((tolower(ans) == 'y'))
+                display();
+
+        }
     }
 }
-
-/*
-int Menu(){
-
-}
- */
