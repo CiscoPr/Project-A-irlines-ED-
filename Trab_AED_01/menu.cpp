@@ -57,6 +57,8 @@ void Menu::company_menu(Menu menu1, Company c1) {
     cout << "                          7- View flights\n";
     cout << "                          8- Add flights\n";
     cout << "                          9- Remove flights\n";
+    cout << "                          10- Update flights\n";
+    cout << "                          11- Load services\n";
     cout << "                          15- exit\n";
     cout << "                                                Choose your option here: ";
     cin >> answer;
@@ -160,7 +162,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
             int id;
             cout << "Insert id of the flight to be removed: ";
             cin >> id;
-            for(int i = 0 ; i > c1.get_planes().size();i++){
+            for(int i = 0 ; i >  c1.get_planes().size();i++){
                 Plane p1 = c1.get_planes()[i];
                 p1.cancel_flight(id);
             }

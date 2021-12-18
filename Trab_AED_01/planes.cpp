@@ -111,3 +111,13 @@ void Plane::update(ofstream &f) {
         f << plan[i].get_id() << " "<<plan[i].get_duration()<< " "<<plan[i].get_departure()<< " "<<plan[i].get_origin()<<" "<<plan[i].get_destination()<< endl;
     }
 }
+
+queue<Service> Plane::get_service() {
+    return service;
+}
+
+void Plane::do_service() {
+    Service a =service.front();
+    service.pop();
+    service_done.push(a);
+}

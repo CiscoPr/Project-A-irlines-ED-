@@ -8,7 +8,10 @@
 #include <list>
 #include <vector>
 #include <sstream>
-
+#include "services.h"
+#include <queue>
+#include <stack>
+class Service;
 using namespace std;
 
 class Flight;
@@ -20,6 +23,8 @@ private:
             string type;
             int capacity;
             vector<Flight> plan;
+            queue<Service> service;
+            stack<Service> service_done;
 public:
     Plane(string registration, string type, int capacity);
     void set_plans(vector<Flight> plan);
@@ -32,6 +37,8 @@ public:
     bool add_flight(Flight flight);
     bool cancel_flight(int id);
     void update(ofstream &f);
+    queue<Service> get_service();
+    void do_service();
 };
 
 
