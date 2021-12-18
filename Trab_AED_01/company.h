@@ -10,9 +10,10 @@ class Company{
 private:
     vector<Plane> planes;
 public:
-    Company();
-    void set_planes(ifstream &f);
-    void show_planes();
+    Company(); //done
+    void set_planes(ifstream &f); //done
+    void show_planes(); //done
+    void add_plane(string registration, int capacity);
     bool remove_plane(string registration);
     vector<Plane> get_planes();
     void update();

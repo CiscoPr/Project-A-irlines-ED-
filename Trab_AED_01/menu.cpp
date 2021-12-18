@@ -25,7 +25,7 @@ int Menu::display() {
     cout << "                   |                    (_  _(_ ,)                                         |\n";
     cout << "                   -------------------------------------------------------------------------\n";
     cout << "\n                                                 AED Airlines                        " << endl;
-    this_thread::sleep_for(chrono::seconds(4));
+//   this_thread::sleep_for(chrono::seconds(4));
     cout << string(4, '\n');
         cout << "\b                          1- Company Menu\n";
         cout << "                          2- User Menu\n";
@@ -132,3 +132,6 @@ int Menu::user_menu() {
     cout << "                                                Choose your option here: ";
 }
 */
+int Menu(){
+
+}

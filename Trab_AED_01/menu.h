@@ -8,6 +8,7 @@ public:
     int display();
     int user_menu();
     int company_menu();
+
 };
 
 #endif
