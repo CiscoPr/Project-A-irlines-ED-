@@ -31,7 +31,7 @@ public:
     void show_flights();
     bool add_flight(Flight flight);
     bool cancel_flight(int id);
-    void uopdate(fstream &f);
+    void update(fstream &f);
 };
 
 

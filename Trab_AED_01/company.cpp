@@ -54,7 +54,7 @@ bool Company::remove_plane(string registration) {
     return false;
 }
 
-vector<Plane> Company::get_planes() {
+vector<Plane> &Company::get_planes() {
     return planes;
 }
 

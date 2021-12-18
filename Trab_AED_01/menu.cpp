@@ -53,9 +53,11 @@ void Menu::company_menu(Menu menu1, Company c1) {
     cout << "                          3- Add planes\n";
     cout << "                          4- Remove planes\n";
     cout << "                          5- Update planes\n";
-    cout << "                          6- Load flights\n";
-    cout << "                          7- Show flight\n";
-    cout << "                          9- exit\n";
+    cout << "                          6- Load flights from file\n";
+    cout << "                          7- View flights\n";
+    cout << "                          8- Add flights\n";
+    cout << "                          9- Remove flights\n";
+    cout << "                          15- exit\n";
     cout << "                                                Choose your option here: ";
     cin >> answer;
     switch (answer) {
@@ -117,7 +119,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
                 cout << "File not found";
                 menu1.company_menu(menu1,c1);
             } else {
-                for (int i=0; i < c1.get_planes().size();i++) {
+                for (int i = 0; i < c1.get_planes().size();i++) {
                     c1.get_planes()[i].set_flights(f_2);
                 }
                     f_2.close();
@@ -125,12 +127,39 @@ void Menu::company_menu(Menu menu1, Company c1) {
             }
         }
         case 7:{
-            for (int i =0; i < c1.get_planes().size();i++ ) {
+            for (int i = 0; i < c1.get_planes().size();i++) {
+                cout << "plane"<<(i+1)<<endl;
                 c1.get_planes()[i].show_flights();
             }
-            menu1.company_menu(menu1, c1);
+                menu1.company_menu(menu1, c1);
+        }
+        case 8:{
+            int id;
+            float departure,duration;
+            string origin, destination, registration;
+            cout << "Add a flight by typing its id: ";
+            cin >> id;
+            cout << "\nand its duration: ";
+            cin >> duration;
+            cout << "\nand its departure: ";
+            cin >> departure;
+            cout << "\nand its origin: ";
+            cin >> origin;
+            cout << "\nand its destination: ";
+            cin >> destination;
+            cout << "\n to the plane with the id: ";
+            cin >> registration;
+            Flight f1(id,duration,departure,origin,destination);
+            for (int i = 0 ; i < c1.get_planes().size();i++){
+                if (c1.get_planes()[i].get_registration()==registration){
+                    c1.get_planes()[i].add_flight(f1);}
+            }
+            menu1.company_menu(menu1,c1);
         }
         case 9:{
+
+        }
+        case 15:{
             char ans = ' ';
             cout << "Are you sure you want to quit? [y/n] ";
             cin >> ans;

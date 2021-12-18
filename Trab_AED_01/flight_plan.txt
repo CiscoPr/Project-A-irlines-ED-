@@ -1,10 +1,2 @@
-2342
-30
-2.30
-Lisboa
-Paris
-1123
-50
-2.50
-Moscovo
-Viena
+2342 30 2.30 Lisboa Paris 1123 50 2.50 Moscovo Viena
+3432 50 2.40 Paris Lisboa 3455 70 3.50 Porto Lisboa

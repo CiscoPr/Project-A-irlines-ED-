@@ -15,7 +15,7 @@ public:
     void show_planes(); //done
     void add_plane(string registration, string type, int capacity);
     bool remove_plane(string registration);
-    vector<Plane> get_planes();
+    vector<Plane> &get_planes();
     void update(ofstream &f);
 };
 
