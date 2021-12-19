@@ -2,6 +2,7 @@
 #include "menu.h"
 #include "company.h"
 #include "transport.h"
+#include "tickets.h"
 
 int main() {
     Menu menu1;

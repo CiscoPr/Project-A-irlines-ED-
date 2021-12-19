@@ -4,8 +4,13 @@
 using namespace std;
 
 class Ticket{
-    int id;
-    Flight flight;
+    int number_of_tickets;
+    //Flight flight;
+public:
+    Ticket(int number_of_tickets);
+    int getNumberOfTickets();
     bool baggage;
+
+    Ticket();
 };
 #endif

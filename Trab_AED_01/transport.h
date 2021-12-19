@@ -28,8 +28,6 @@ public:
     Local_of_Transport(): transports(Transport("", "", "")){};    //not sure if it is right
     BST<Transport> getTrans() const;
     void readFile(ifstream& f);
-    string consult(string type1, Transport& previous, Transport& next) const;
-    bool update(string type1, string distance1, string hours1);
     void print() const;
 
 };

@@ -2,6 +2,7 @@
 #include "flights.h"
 #include <thread>
 #include "transport.h"
+#include "tickets.h"
 #include <iostream>
 using namespace std;
 using namespace chrono;
@@ -66,7 +67,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
     switch (answer) {
         case 1: {
             ifstream f;
-            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\planes.txt");
+            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -106,7 +107,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
 
         case 5: {                                       //dá update aos aviões
             ofstream f;
-            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\planes.txt");
+            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -121,7 +122,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
         }
         case 6:{
             ifstream f_2;
-            f_2.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\flight_plan.txt");
+            f_2.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\flight_plan.txt");
             if (!f_2.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -177,7 +178,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
         }
         case 10:{
             ofstream f;
-            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\flight_plan.txt");
+            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\flight_plan.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -218,9 +219,37 @@ void Menu::user_menu(Menu menu2, Local_of_Transport l2) {
     cout << "                                                Choose your option here: ";
     cin >> choice;
     switch (choice) {
+        case 1:{
+            int wanted;
+            char b = ' ';
+            cout << "How many tickets do you want to buy? ";
+            cin >> wanted;
+            Ticket t1;
+            if(wanted > t1.getNumberOfTickets())
+            {
+                cout << "There are no more tickets left for this flight.\n";
+                cout << "Please try another one\n";
+                //   this_thread::sleep_for(chrono::seconds(4))
+                menu2.user_menu(menu2, l2);
+            }
+            else{
+                t1.getNumberOfTickets() - wanted;
+                cout << "\nWill you carry any kind of baggage?[y/n] ";
+                cin >> b;
+                if (tolower(b) == 'n'){
+                    cout << "\nOk, thank you for your purchase! ";
+                    t1.baggage = false;
+                }
+                else if(tolower(b)== 'y'){
+                    t1.baggage = true;
+                    cout << "\nOk, thank you for your purchase! ";
+                }
+            }
+
+        }
         case 2:{
             ifstream  f;
-            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\transp.txt");
+            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\transp.txt");
             if(!f.is_open()){
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
