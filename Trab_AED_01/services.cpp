@@ -17,3 +17,6 @@ Service::Service(Servicetype s1, float data, Employee employee) {
     this->data=data;
     this->employee=employee;
 }
+Service::Service() {
+
+}

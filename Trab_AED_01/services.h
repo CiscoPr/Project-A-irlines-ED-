@@ -11,6 +11,7 @@ class Service{
     Employee employee;
     Servicetype type;
 public:
+    Service();
     Service(Servicetype s1, float data, Employee employee);
     Servicetype get_type();
     float get_data();
