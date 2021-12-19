@@ -62,7 +62,9 @@
 				7,
 				9,
 				11,
-				13
+				13,
+				16,
+				18
 			]
 		}
 	],
@@ -106,7 +108,9 @@
 				7,
 				9,
 				11,
-				13
+				13,
+				16,
+				18
 			]
 		},
 		{
@@ -119,7 +123,9 @@
 				8,
 				10,
 				12,
-				14
+				14,
+				15,
+				17
 			]
 		}
 	],
@@ -207,6 +213,28 @@
 			"backtrace" : 1,
 			"path" : "Trab_AED_01/company.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/transport.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Trab_AED_01/transport.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/bagage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Trab_AED_01/bagage.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

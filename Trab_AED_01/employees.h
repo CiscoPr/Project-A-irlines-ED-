@@ -6,6 +6,9 @@
 using namespace std;
 
 class Employee{
+private:
     string name;
+public:
+    string get_name();
 };
 #endif

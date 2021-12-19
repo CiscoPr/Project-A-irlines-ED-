@@ -4,15 +4,17 @@
 
 #include "employees.h"
 using namespace std;
-
+enum Servicetype{
+    maintenance, cleaning};
 class Service{
-private:
-    enum service{
-        maintenance, cleaning};
     float data;
     Employee employee;
+    Servicetype type;
+public:
+    Servicetype get_type();
+    float get_data();
+    Employee get_employee();
 };
-
 
 
 #endif

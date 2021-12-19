@@ -52,7 +52,7 @@ void Plane::set_flights(ifstream &f) {
     string id_str, duration_str, departure_str, origin, destination;
     getline(f, s1);
     stringstream s2(s1);
-    while(s2>>b){
+    while(s2>>b) {
         a.push_back(b);
     }
     for (int i =0;i < a.size();i++){
@@ -120,4 +120,7 @@ void Plane::do_service() {
     Service a =service.front();
     service.pop();
     service_done.push(a);
+}
+void Plane::show_last_service_done() {
+    cout << service_done.top().get_type();
 }
