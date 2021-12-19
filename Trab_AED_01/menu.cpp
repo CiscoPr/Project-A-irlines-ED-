@@ -1,6 +1,7 @@
 #include "menu.h"
 #include "flights.h"
 #include <thread>
+#include "transport.h"
 #include <iostream>
 using namespace std;
 using namespace chrono;
@@ -68,6 +69,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
             f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
+                //   this_thread::sleep_for(chrono::seconds(4));
                 menu1.company_menu(menu1,c1);
 
             } else {
@@ -78,6 +80,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
         }
         case 2:
             c1.show_planes();
+            //   this_thread::sleep_for(chrono::seconds(4));
             menu1.company_menu(menu1,c1);
 
         case 3: {                                       //adiciona aviões
@@ -106,11 +109,13 @@ void Menu::company_menu(Menu menu1, Company c1) {
             f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
+                //   this_thread::sleep_for(chrono::seconds(4));
                 menu1.company_menu(menu1,c1);
             } else {
                 c1.update(f);
                 f.close();
                 cout << "\nPlanes updated successfully!";
+                //   this_thread::sleep_for(chrono::seconds(4));
                 menu1.company_menu(menu1,c1);
             }
         }
@@ -119,6 +124,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
             f_2.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\flight_plan.txt");
             if (!f_2.is_open()) {
                 cout << "File not found";
+                //   this_thread::sleep_for(chrono::seconds(4));
                 menu1.company_menu(menu1,c1);
             } else {
                 for (int i = 0; i < c1.get_planes().size();i++) {
@@ -132,6 +138,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
             for (int i = 0; i < c1.get_planes().size();i++) {
                 cout << "plane"<<(i+1)<<endl;
                 c1.get_planes()[i].show_flights();
+                //   this_thread::sleep_for(chrono::seconds(4));
             }
                 menu1.company_menu(menu1, c1);
         }
@@ -173,6 +180,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
             f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\flight_plan.txt");
             if (!f.is_open()) {
                 cout << "File not found";
+                //   this_thread::sleep_for(chrono::seconds(4));
                 menu1.company_menu(menu1,c1);
             }
             else {
@@ -181,6 +189,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
                 }
                 f.close();
                 cout << "\nPlanes updated successfully!";
+                //   this_thread::sleep_for(chrono::seconds(4));
                 menu1.company_menu(menu1,c1);
             }
         }
@@ -197,7 +206,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
     }
 }
 
-void Menu::user_menu(Menu menu2) {
+void Menu::user_menu(Menu menu2, Local_of_Transport l2) {
     int answer;
     int choice;
     cout << string(4, '\n');
@@ -208,5 +217,32 @@ void Menu::user_menu(Menu menu2) {
     cout << "                          3- Exit\n";
     cout << "                                                Choose your option here: ";
     cin >> choice;
+    switch (choice) {
+        case 2:{
+            ifstream  f;
+            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\transp.txt");
+            if(!f.is_open()){
+                cout << "File not found";
+                //   this_thread::sleep_for(chrono::seconds(4));
+                menu2.user_menu(menu2, l2);
+            }
+            Local_of_Transport l2;
+            l2.readFile(f);
+            f.close();
+            l2.print();
+            this_thread::sleep_for(chrono::seconds(4));
+            menu2.user_menu(menu2, l2);
+        }
 
+        case 3:{
+            char ans = ' ';
+            cout << "Are you sure you want to quit? [y/n] ";
+            cin >> ans;
+            if ((tolower(ans) == 'n'))
+                menu2.user_menu(menu2, l2);
+            else if ((tolower(ans) == 'y'))
+                display();
+        }
+
+    }
 }

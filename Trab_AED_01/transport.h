@@ -9,29 +9,27 @@
 #include <fstream>
 using namespace std;
 class Transport {
-    string type;
-    int distance;
-    float hours;
+    string type, distance, hours;
     friend bool operator <(const Transport & a, const Transport & b);
     friend ostream& operator <<(ostream& out ,const Transport & a);
 public:
-    Transport(string t, int d, float h);
+    Transport(string t, string d, string h);
     string getType() const;
-    int getD() const;
-    float getHours() const;
+    string getD() const;
+    string getHours() const;
     void setType(string t);
-    void setDistance(int d);
-    void setHours(float h);
+    void setDistance(string d);
+    void setHours(string h);
 };
 
 class Local_of_Transport{
     BST<Transport> transports;
 public:
-    Local_of_Transport(): transports(Transport("", 0, 0.0)){};    //not sure if it is right
-    BST<Transport> getTypes() const;
+    Local_of_Transport(): transports(Transport("", "", "")){};    //not sure if it is right
+    BST<Transport> getTrans() const;
     void readFile(ifstream& f);
     string consult(string type1, Transport& previous, Transport& next) const;
-    bool update(string type1, int distance1, float hours1);
+    bool update(string type1, string distance1, string hours1);
     void print() const;
 
 };

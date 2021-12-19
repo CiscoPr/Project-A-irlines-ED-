@@ -61,6 +61,7 @@ public:
     const BST& operator= (const BST& rhs);
     iteratorBST<Comparable> begin() const;
     iteratorBST<Comparable> end() const;
+    int size(const Comparable& el) const;   //new
 };
 
 // Note that all "matching" is based on the < method.
@@ -144,6 +145,26 @@ iteratorBST<Comparable> BST<Comparable>::end() const {
     iteratorBST<Comparable> it;
     it.setBST(NULL);
     return it;
+}
+
+//--------------------------------------------------------
+
+template <class Comparable>
+int BST<Comparable>::size(const Comparable& el) const {
+    int n= 0;
+    auto parent = find(el, root);
+    if (parent == NULL)
+        return -1;
+    auto l = parent->left, r = parent->right;
+    if (l != NULL){
+        n++;
+        n+= size(l->element);
+    }
+    if (r != NULL){
+        n++;
+        n+= size(r->element);
+    }
+    return n;
 }
 
 
@@ -456,6 +477,7 @@ template <class Comparable>
 bool iteratorBST<Comparable>::operator!= (const iteratorBST<Comparable>& it2) const {
     return itrStack != it2.itrStack;
 }
+
 
 
 #endif
