@@ -10,7 +10,7 @@ using namespace std;
 class Menu{
 public:
     int display();
-    void user_menu();
+    void user_menu(Menu menu1);
     void company_menu(Menu menu1, Company c1);
 };
 

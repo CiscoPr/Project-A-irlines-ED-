@@ -65,7 +65,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
     switch (answer) {
         case 1: {
             ifstream f;
-            f.open("/Trab_AED_01/Trab_AED_01/planes.txt");
+            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 menu1.company_menu(menu1,c1);
@@ -103,7 +103,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
 
         case 5: {                                       //dá update aos aviões
             ofstream f;
-            f.open("/Trab_AED_01/Trab_AED_01/planes.txt");
+            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 menu1.company_menu(menu1,c1);
@@ -116,7 +116,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
         }
         case 6:{
             ifstream f_2;
-            f_2.open("/Trab_AED_01/Trab_AED_01/flight_plan.txt");
+            f_2.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\flight_plan.txt");
             if (!f_2.is_open()) {
                 cout << "File not found";
                 menu1.company_menu(menu1,c1);
@@ -170,7 +170,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
         }
         case 10:{
             ofstream f;
-            f.open("/Trab_AED_01/Trab_AED_01/flight_plan.txt");
+            f.open("C:\\Users\\Francisco Prada\\OneDrive\\Ambiente de Trabalho\\Project-A-irlines-ED--main\\Trab_AED_01\\flight_plan.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 menu1.company_menu(menu1,c1);
@@ -195,4 +195,18 @@ void Menu::company_menu(Menu menu1, Company c1) {
 
         }
     }
+}
+
+void Menu::user_menu(Menu menu2) {
+    int answer;
+    int choice;
+    cout << string(4, '\n');
+    cout << "\b                                            Welcome to the AED Airlines!\n";
+    cout << "                                                  How may we help you?\n";
+    cout << "                          1- Buy a ticket\n";
+    cout << "                          2- See near means of transport\n";
+    cout << "                          3- Exit\n";
+    cout << "                                                Choose your option here: ";
+    cin >> choice;
+
 }
