@@ -12,3 +12,8 @@ float Service::get_data() {
 Employee Service::get_employee() {
     return employee;
 }
+Service::Service(Servicetype s1, float data, Employee employee) {
+    this->type=s1;
+    this->data=data;
+    this->employee=employee;
+}

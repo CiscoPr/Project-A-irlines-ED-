@@ -122,5 +122,33 @@ void Plane::do_service() {
     service_done.push(a);
 }
 void Plane::show_last_service_done() {
-    cout << service_done.top().get_type();
+    cout << service_done.top().get_type() << " " << service_done.top().get_employee().get_name() << " "<<service_done.top().get_data() ;
+}
+
+void Plane::set_services(ifstream &f) {
+    vector<string> a;
+    int data;
+    Servicetype type;
+    string s1,b,date_str, name;
+    string type_str;
+    getline(f, s1);
+    stringstream s2(s1);
+    while(s2>>b) {
+        a.push_back(b);
+    }
+    for (int i =0;i < a.size();i++){
+        type_str=a[i];
+        i++;
+        date_str=a[i];
+        i++;
+        stringstream s3(date_str);
+        stringstream s4(type_str);
+        s3>> data;
+        s4 >> type;
+        name=a[i];
+        Employee e1(name);
+        Service s1(type,data,e1);
+    }
+    sort(c.begin(), c.end(), compFlights);
+    this->plan=c;
 }
