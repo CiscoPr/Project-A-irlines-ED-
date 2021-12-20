@@ -61,7 +61,11 @@ void Menu::company_menu(Menu menu1, Company c1) {
     cout << "                          9- Remove flights\n";
     cout << "                          10- Update flights\n";
     cout << "                          11- Load services\n";
-    cout << "                          15- exit\n";
+    cout << "                          12- Do a service\n";
+    cout << "                          13- Show last service done\n";
+    cout << "                          14- Add service\n";
+    cout << "                          15- Update services\n";
+    cout << "                          16- exit\n";
     cout << "                                                Choose your option here: ";
     cin >> answer;
     switch (answer) {
@@ -196,7 +200,96 @@ void Menu::company_menu(Menu menu1, Company c1) {
                 menu1.company_menu(menu1,c1);
             }
         }
+        case 11:{
+            ifstream f_2;
+            f_2.open("\\Trab_AED_01\\Trab_AED_01\\services.txt");
+            if (!f_2.is_open()) {
+                cout << "File not found";
+                //   this_thread::sleep_for(chrono::seconds(4));
+                menu1.company_menu(menu1,c1);
+            } else {
+                for (int i = 0; i < c1.get_planes().size();i++) {
+                    c1.get_planes()[i].set_services(f_2);
+                }
+                f_2.close();
+                menu1.company_menu(menu1, c1);
+            }
+        }
+        case 12:{
+            string registration;
+            cout << "Insert registration of the plane where the service will be done : ";
+            cin >> registration;
+            for(int i = 0 ; i >  c1.get_planes().size();i++){
+                if (c1.get_planes()[i].get_registration() == registration){
+                    c1.get_planes()[i].do_service();
+                }
+            }
+            menu1.company_menu(menu1,c1);
+        }
+        case 13:{
+            string registration;
+            cout << "Insert registration of the plane: ";
+            cin >> registration;
+            for(int i = 0 ; i >  c1.get_planes().size();i++){
+                if (c1.get_planes()[i].get_registration() == registration){
+                    c1.get_planes()[i].show_last_service_done();
+                }
+            }
+            menu1.company_menu(menu1,c1);
+        }
+        case 14:{
+            int choice;
+            string name;
+            float data;
+            string registration;
+            cout << "Insert registration of the plane: ";
+            cin >> registration;
+            Servicetype type;
+            cout << "Service type: maintenance(1) or cleaning(2): ";
+            cin >> choice;
+            if (choice==1){
+                type= maintenance;
+            }
+            else if (choice==2){
+                type= cleaning;
+            }
+            else {
+                cout<<"Invalid input";
+                menu1.company_menu(menu1,c1);
+            }
+            cout << "Insert the data for the service";
+            cin >> data;
+            cout << "Insert name of the employee: ";
+            cin >> name;
+            Employee e1 (name);
+            Service s1(type,data,e1);
+            for(int i = 0 ; i >  c1.get_planes().size();i++){
+                if (c1.get_planes()[i].get_registration() == registration){
+                    c1.get_planes()[i].add_service(s1);
+                }
+            }
+        }
         case 15:{
+            ofstream f;
+            f.open("\\Trab_AED_01\\Trab_AED_01\\flight_plan.txt");
+            if (!f.is_open()) {
+                cout << "File not found";
+                //   this_thread::sleep_for(chrono::seconds(4));
+                menu1.company_menu(menu1,c1);
+            }
+            else {
+                for (int i = 0 ; i < c1.get_planes().size();i++) {
+                    c1.get_planes()[i].update_services(f);
+                }
+                f.close();
+                cout << "\nPlanes updated successfully!";
+                //   this_thread::sleep_for(chrono::seconds(4));
+                menu1.company_menu(menu1,c1);
+            }
+
+        }
+
+        case 16:{
             char ans = ' ';
             cout << "Are you sure you want to quit? [y/n] ";
             cin >> ans;

@@ -15,6 +15,9 @@ bool compFlights(Flight &f1, Flight &f2){
     else return f1.get_id()< f2.get_id();
 };
 
+bool compServices(Service &s1, Service &s2){
+    return s1.get_data()<s2.get_data();
+}
 
 Plane::Plane(string registration, string type, int capacity) {
     this->registration=registration;
@@ -141,4 +144,94 @@ void Plane::do_service() {
     Service a =service.front();
     service.pop();
     service_done.push(a);
+}
+
+void Plane::show_last_service_done() {
+    cout << service_done.top().get_type() << " " << service_done.top().get_employee().get_name() << " "<<service_done.top().get_data() ;
+}
+
+void Plane::set_services(ifstream &f) {
+    vector<string> a,d;
+    vector<Service> serv,serv_done;
+    int data;
+    Servicetype type;
+    string s1,s4,b,c,date_str, name;
+    string type_str;
+    getline(f, s1);
+    getline(f, s4);
+    stringstream s2(s1);
+    stringstream s5(s4);
+    while(s2>>b) {
+        a.push_back(b);
+    }
+    for (int i =0;i < a.size();i++){
+        type_str=a[i];
+        i++;
+        date_str=a[i];
+        i++;
+        stringstream s3(date_str);
+        s3>> data;
+        if (type_str=="cleaning"){
+            type= cleaning;
+        }
+        else if (type_str== "maintenance"){
+            type= maintenance;
+        }
+        name=a[i];
+        Employee e1(name);
+        Service s1(type,data,e1);
+        serv.push_back(s1);
+    }
+    while(s2>>c) {
+        d.push_back(b);
+    }
+    for (int i =0;i < d.size();i++){
+        type_str=d[i];
+        i++;
+        date_str=d[i];
+        i++;
+        stringstream s3(date_str);
+        s3>> data;
+        if (type_str=="cleaning"){
+            type= cleaning;
+        }
+        else if (type_str== "maintenance"){
+            type= maintenance;
+        }
+        name=d[i];
+        Employee e2(name);
+        Service s2(type,data,e2);
+        serv_done.push_back(s2);
+    }
+    sort(serv.begin(), serv.end(), compServices);
+    sort( serv_done.begin(), serv_done.end(), compServices);
+    for (int i =0 ; i < serv.size();i++){
+        this->service.push(serv[i]);
+    }
+    for (int i = 0 ; i <serv_done.size();i++){
+        this->service_done.push(serv_done[i]);
+    }
+}
+
+void Plane::add_service(Service service) {
+    this->service.push(service);
+}
+
+void Plane::update_services(ofstream &f) {
+    queue<Service> copia;
+    stack<Service> copia_1;
+    Service s1,s2;
+    copia=service;
+    copia_1 = service_done;
+    while(copia.size()!=0){
+        s1=copia.front();
+        copia.pop();
+        f << s1.get_type() << " "<< s1.get_data()<<" "<<s1.get_employee().get_name()<< " ";
+    }
+    f<< endl;
+    while(copia_1.size()!=0){
+        s2=copia_1.top();
+        copia_1.pop();
+        f << s2.get_type() << " "<< s2.get_data()<< " "<< s2.get_employee().get_name()<< " ";
+    }
 }
