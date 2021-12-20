@@ -34,15 +34,12 @@ public:
     int get_capacity();
     void set_flights(ifstream &f);
     void show_flights();
+    bool seats(int tickets, int id);
     bool add_flight(Flight flight);
     bool cancel_flight(int id);
     void update(ofstream &f);
-    void set_services(ifstream &f);
     queue<Service> get_service();
     void do_service();
-    void show_last_service_done();
-    void add_service(Service service);
-    void update_services(ofstream &f);
 
 };
 
