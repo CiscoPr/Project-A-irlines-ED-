@@ -71,7 +71,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
     switch (answer) {
         case 1: {
             ifstream f;
-            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\planes.txt");
+            f.open("\\Trab_AED_01\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -111,7 +111,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
 
         case 5: {                                       //dá update aos aviões
             ofstream f;
-            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\planes.txt");
+            f.open("\\Trab_AED_01\\Trab_AED_01\\planes.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -126,7 +126,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
         }
         case 6:{
             ifstream f_2;
-            f_2.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\flight_plan.txt");
+            f_2.open("\\Trab_AED_01\\Trab_AED_01\\flight_plan.txt");
             if (!f_2.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -184,7 +184,7 @@ void Menu::company_menu(Menu menu1, Company c1) {
         }
         case 10:{
             ofstream f;
-            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\flight_plan.txt");
+            f.open("\\Trab_AED_01\\Trab_AED_01\\flight_plan.txt");
             if (!f.is_open()) {
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
@@ -354,7 +354,7 @@ void Menu::user_menu(Menu menu2, Local_of_Transport l2) {
         }
         case 2:{
             ifstream  f;
-            f.open("C:\\Users\\Francisco Prada\\Downloads\\Trab_AED_01\\Trab_AED_01\\transp.txt");
+            f.open("\\Trab_AED_01\\Trab_AED_01\\transp.txt");
             if(!f.is_open()){
                 cout << "File not found";
                 //   this_thread::sleep_for(chrono::seconds(4));
