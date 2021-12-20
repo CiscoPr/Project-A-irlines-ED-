@@ -64,7 +64,9 @@
 				11,
 				13,
 				16,
-				18
+				17,
+				19,
+				21
 			]
 		}
 	],
@@ -110,7 +112,9 @@
 				11,
 				13,
 				16,
-				18
+				17,
+				19,
+				21
 			]
 		},
 		{
@@ -125,7 +129,9 @@
 				12,
 				14,
 				15,
-				17
+				18,
+				20,
+				22
 			]
 		}
 	],
@@ -227,14 +233,36 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Trab_AED_01/bagage.h",
+			"compileGroupIndex" : 0,
+			"path" : "Trab_AED_01/baggage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/baggage.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Trab_AED_01/bagage.cpp",
+			"path" : "Trab_AED_01/treadmill.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/treadmill.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Trab_AED_01/cart.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Trab_AED_01/cart.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

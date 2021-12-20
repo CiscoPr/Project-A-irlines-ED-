@@ -115,8 +115,20 @@ build CMakeFiles/Trab_AED_01.dir/Trab_AED_01/transport.cpp.obj: CXX_COMPILER__Tr
   OBJECT_DIR = CMakeFiles\Trab_AED_01.dir
   OBJECT_FILE_DIR = CMakeFiles\Trab_AED_01.dir\Trab_AED_01
 
-build CMakeFiles/Trab_AED_01.dir/Trab_AED_01/bagage.cpp.obj: CXX_COMPILER__Trab_AED_01_Debug C$:/Trab_AED_01/Trab_AED_01/bagage.cpp || cmake_object_order_depends_target_Trab_AED_01
-  DEP_FILE = CMakeFiles\Trab_AED_01.dir\Trab_AED_01\bagage.cpp.obj.d
+build CMakeFiles/Trab_AED_01.dir/Trab_AED_01/baggage.cpp.obj: CXX_COMPILER__Trab_AED_01_Debug C$:/Trab_AED_01/Trab_AED_01/baggage.cpp || cmake_object_order_depends_target_Trab_AED_01
+  DEP_FILE = CMakeFiles\Trab_AED_01.dir\Trab_AED_01\baggage.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Trab_AED_01.dir
+  OBJECT_FILE_DIR = CMakeFiles\Trab_AED_01.dir\Trab_AED_01
+
+build CMakeFiles/Trab_AED_01.dir/Trab_AED_01/treadmill.cpp.obj: CXX_COMPILER__Trab_AED_01_Debug C$:/Trab_AED_01/Trab_AED_01/treadmill.cpp || cmake_object_order_depends_target_Trab_AED_01
+  DEP_FILE = CMakeFiles\Trab_AED_01.dir\Trab_AED_01\treadmill.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Trab_AED_01.dir
+  OBJECT_FILE_DIR = CMakeFiles\Trab_AED_01.dir\Trab_AED_01
+
+build CMakeFiles/Trab_AED_01.dir/Trab_AED_01/cart.cpp.obj: CXX_COMPILER__Trab_AED_01_Debug C$:/Trab_AED_01/Trab_AED_01/cart.cpp || cmake_object_order_depends_target_Trab_AED_01
+  DEP_FILE = CMakeFiles\Trab_AED_01.dir\Trab_AED_01\cart.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Trab_AED_01.dir
   OBJECT_FILE_DIR = CMakeFiles\Trab_AED_01.dir\Trab_AED_01
@@ -129,7 +141,7 @@ build CMakeFiles/Trab_AED_01.dir/Trab_AED_01/bagage.cpp.obj: CXX_COMPILER__Trab_
 #############################################
 # Link the executable Trab_AED_01.exe
 
-build Trab_AED_01.exe: CXX_EXECUTABLE_LINKER__Trab_AED_01_Debug CMakeFiles/Trab_AED_01.dir/Trab_AED_01/main.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/employees.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/flights.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/planes.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/services.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/menu.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/tickets.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/company.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/transport.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/bagage.cpp.obj
+build Trab_AED_01.exe: CXX_EXECUTABLE_LINKER__Trab_AED_01_Debug CMakeFiles/Trab_AED_01.dir/Trab_AED_01/main.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/employees.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/flights.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/planes.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/services.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/menu.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/tickets.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/company.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/transport.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/baggage.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/treadmill.cpp.obj CMakeFiles/Trab_AED_01.dir/Trab_AED_01/cart.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Trab_AED_01.dir
