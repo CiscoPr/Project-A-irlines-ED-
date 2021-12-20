@@ -3,21 +3,23 @@
 
 #include <string>
 #include "company.h"
-
+#include "tickets.h"
 using namespace std;
 class Company;
 
 class Flight {
 private:
-    int id;
+    int id, seats_available;
     float duration;
     float departure;
     string origin;
     string destination;
 public:
-    Flight(int id, float duration, float departure, string origin, string destination);
+    Flight(int id, int seats_available, float duration, float departure, string origin, string destination);
 
     int get_id();
+
+    int get_seats_available();
 
     float get_departure();
 

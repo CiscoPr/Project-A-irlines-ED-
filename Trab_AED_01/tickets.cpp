@@ -1,6 +1,8 @@
 #include "tickets.h"
 #include <iostream>
 
+//useless class
+
 using namespace std;
 
 Ticket::Ticket(int number_of_tickets) {
