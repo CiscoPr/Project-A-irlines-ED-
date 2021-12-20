@@ -12,6 +12,6 @@ private:
 public:
     Employee();
     Employee(string name);
-    string get_name();
+    string get_name(); // simply returns the name of the employee
 };
 #endif
